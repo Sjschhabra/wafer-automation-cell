@@ -1,0 +1,71 @@
+# M1Studio Script
+
+x0 = 185.0
+y0 = 33.0
+z0 = 95.0
+r0 = -90.0
+
+current_z = z0
+step_down = 20.0
+min_z = 30.0
+
+dType.SetArmOrientation(api, 0, 1)
+dType.SetPTPCommonParams(api, 10, 10, 1)
+
+while current_z >= min_z:
+
+    # -------- WAIT FOR INPUT LOW --------
+    while dType.GetIODI(api, 18)[0] != 0:
+        dType.dSleep(50)
+
+    print("INPUT 18 LOW - STARTING PROCESS")
+
+    # -------- ONE CYCLE ONLY --------
+    dType.SetPTPCmdSync(api, 1, x0, y0, current_z, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0, y0 - 50, current_z, r0)
+    dType.SetPTPCmdSync(api, 1, x0, y0 - 100, current_z, r0)
+    dType.SetPTPCmdSync(api, 1, x0, y0 - 147.0, current_z, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0, y0 - 147.0, current_z + 20.0, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0, y0 - 100, current_z + 20.0, r0)
+    dType.SetPTPCmdSync(api, 1, x0, y0 - 50, current_z + 20.0, r0)
+    dType.SetPTPCmdSync(api, 1, x0, y0, current_z + 20.0, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0 + 180.0, y0, 115.0, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0 + 180.0, y0 - 146.0, 115.0, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0 + 180.0, y0 - 146.0, 80.0, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0 + 180.0, y0 - 100, 80.0, r0)
+    dType.SetPTPCmdSync(api, 1, x0 + 180.0, y0 - 50, 80.0, r0)
+    dType.SetPTPCmdSync(api, 1, x0 + 180.0, y0, 80.0, r0)
+    dType.dSleep(500)
+
+    dType.SetPTPCmdSync(api, 1, x0, y0, current_z, r0)
+    dType.dSleep(500)
+
+    print("PROCESS COMPLETE - SETTING OUTPUT HIGH")
+
+    # -------- OUTPUT HIGH --------
+    dType.SetIODOSync(api, 18, 1)
+    dType.dSleep(2000)
+    dType.SetIODOSync(api, 18, 0)
+
+    # -------- WAIT FOR INPUT RELEASE --------
+    while dType.GetIODI(api, 18)[0] == 0:
+        dType.dSleep(100)
+
+    print("WAITING FOR NEXT TRIGGER...")
+
+    # -------- NEXT LEVEL --------
+    current_z = current_z - step_down

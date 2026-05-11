@@ -1,0 +1,179 @@
+(****** QuickLD compiler *******************************)
+(****** Copyright Rockwell Automation Canada, Ltd ******)
+(****** ST *********************************************)
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,1
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+START := _IO_EM_DI_06 ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0001 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,3
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+__EDTB2 := START ;
+IF __EDTB2 THEN
+(* Operator output on : <= with __EDTB1 *)
+__EDTB1 := (_IO_EM_AI_00 <= CONVEYORON) ;
+ELSE
+__EDTB1 := FALSE ;
+END_IF ;
+__MO_LESSEQUAL_1 := __EDTB1 ;
+(* FB call: TP *)
+TP_6(__EDTB1, T#2S) ;
+_IO_EM_DO_04 := TP_6.Q ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0002 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,7
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+__EDTB4 := TRUE ;
+IF __EDTB4 THEN
+(* Operator output on : <= with __EDTB3 *)
+__EDTB3 := (_IO_EM_AI_01 <= CONVEYORON) ;
+ELSE
+__EDTB3 := FALSE ;
+END_IF ;
+__MO_LESSEQUAL_2 := __EDTB3 ;
+(* FB call: TP *)
+TP_5(__EDTB3, T#2S) ;
+_IO_EM_DO_05 := TP_5.Q ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0003 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,11
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+(* FB call: TP *)
+TP_1(NOT(_IO_EM_DI_04), T#2S) ;
+TRIGERC := TP_1.Q ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0004 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,14
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+(* FB call: TP *)
+TP_2(_IO_EM_DI_05, T#2S) ;
+TRIGERD := TP_2.Q ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0005 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,17
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+__EDTB6 := TRUE ;
+IF __EDTB6 THEN
+(* Operator output on : <= with __EDTB5 *)
+__EDTB5 := (_IO_EM_AI_00 <= CONVEYORON) ;
+ELSE
+__EDTB5 := FALSE ;
+END_IF ;
+__MO_LESSEQUAL_3 := __EDTB5 ;
+(* FB call: TP *)
+TP_3(__EDTB5, T#2S) ;
+TRIGERA := TP_3.Q ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0006 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,21
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+__EDTB8 := TRUE ;
+IF __EDTB8 THEN
+(* Operator output on : <= with __EDTB7 *)
+__EDTB7 := (_IO_EM_AI_01 <= CONVEYORON) ;
+ELSE
+__EDTB7 := FALSE ;
+END_IF ;
+__MO_LESSEQUAL_4 := __EDTB7 ;
+(* FB call: TP *)
+TP_4(__EDTB7, T#2S) ;
+TRIGERB := TP_4.Q ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0007 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,25
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+__EDTB9 := TRIGERA ;
+__EDTB10 := TRIGERC ;
+_IO_EM_DO_00 := NOT((__EDTB9 OR __EDTB10)) ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0008 ;
+
+
+(*************** Rung **********************************)
+(**)
+__STEPPRAGMA
+0,28
+__ENDSTEPPRAGMA
+(*Label :*)(**)
+__EDTB11 := TRIGERB ;
+__EDTB12 := TRIGERD ;
+_IO_EM_DO_01 := NOT((__EDTB11 OR __EDTB12)) ;
+
+(*************** Code for the end of Rung **************)
+__GL __LG0009 ;
+
+
+(*************** Code for the end of File **************)
+__GL __LG0000 ;
+
+
+
+(*************** Local Symbols table *******************)
+(* __EDTB1 *)
+(* __EDTB2 *)
+(* __EDTB3 *)
+(* __EDTB4 *)
+(* __EDTB5 *)
+(* __EDTB6 *)
+(* __EDTB7 *)
+(* __EDTB8 *)
+(* __EDTB9 *)
+(* __EDTB10 *)
+(* __EDTB11 *)
+(* __EDTB12 *)
+
