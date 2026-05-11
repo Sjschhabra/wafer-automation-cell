@@ -3,7 +3,9 @@
 ### PLC-Controlled Multi-Robot Semiconductor Handling System
 
 🚀 A semiconductor wafer handling automation system combining collaborative robotics, industrial controls, computer vision, and real-time system integration.
+
 ![Demo](https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/VID_20260505_194533-ezgif.com-video-to-gif-converter.gif)
+
 ---
 
 # System Overview
@@ -27,11 +29,11 @@ The system autonomously transfers semiconductor wafers between robotic stations 
 
 ## Full Automation Cell
 
-![Automation Cell](media/system_overview.png)
+![Automation Cell](https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/Recording2026-05-08185129-ezgif.com-video-to-gif-converter.gif)
 
-## Demo GIF
+## HMI
 
-![Demo](media/system_demo.gif)
+![Automation Cell](https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/WhatsApp%20Image%202026-05-08%20at%2018.45.39%20(1).jpeg)
 
 ---
 
@@ -107,7 +109,7 @@ media/       → Images, GIFs, screenshots, videos
 
 # Team
 
-* Sameerjeet Singh
+* Sameerjeet Singh Chhabra
 * Vishavjit Singh Khinda
 * Shao-Chi Cheng
 
