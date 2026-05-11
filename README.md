@@ -3,7 +3,7 @@
 ### PLC-Controlled Multi-Robot Semiconductor Handling System
 
 🚀 A semiconductor wafer handling automation system combining collaborative robotics, industrial controls, computer vision, and real-time system integration.
-![Demo](media/system_demo.gif)
+![Demo](https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/VID_20260505_194533-ezgif.com-video-to-gif-converter.gif)
 ---
 
 # System Overview
