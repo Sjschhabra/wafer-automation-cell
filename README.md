@@ -70,6 +70,8 @@ The system autonomously transfers semiconductor wafers between robotic stations 
 * Dobot M1 SCARA
 * Elephant Robotics Pro600
 * RoboFlow
+![Demo](https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/Screenshot%202026-05-05%20191945.png)
+![Demo](https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/Screenshot%202026-05-11%20161342.png)
 
 ## Controls & Automation
 
