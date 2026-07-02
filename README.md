@@ -34,7 +34,8 @@ The system autonomously transfers semiconductor wafers between robotic stations 
 # Full Automation Cell
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/Recording2026-05-08185129-ezgif.com-video-to-gif-converter.gif" width="750"/>
+  <img src="https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/Screenshot1.png" width="750"/>
+  <img src="https://raw.githubusercontent.com/Sjschhabra/wafer-automation-cell/refs/heads/main/media/Screenshot2.png" width="750"/>
 </p>
 
 ---
