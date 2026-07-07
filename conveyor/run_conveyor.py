@@ -42,10 +42,6 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 
 
 def get_next_image_number(folder):
-    """
-    找資料夾內已存在的 0001.jpg, 0002.jpg...
-    回傳下一個編號
-    """
     max_num = 0
 
     for filename in os.listdir(folder):
@@ -58,9 +54,6 @@ def get_next_image_number(folder):
 
 
 def save_image(frame, number):
-    """
-    儲存照片，檔名格式為 0001.jpg
-    """
     filename = f"{number:04d}.jpg"
     path = os.path.join(SAVE_DIR, filename)
     cv2.imwrite(path, frame)
