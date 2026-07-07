@@ -7,13 +7,13 @@ mc = MyCobot("/dev/ttyUSB0", 115200)
 START_IN = 0
 DONE_OUT = 1
 
-# Same pickup path every cycle
+# Pickup path every cycle
 PICK_1 = [-342.22, 344.90, 329.72, -178.95, 0.63, -67.55]
 PICK_2 = [-342.79, 345.81, 253.84, -179.05, 1.23, -67.56]
 PICK_3 = [-343.18, 346.43, 332.54, -179.14, 1.76, -67.56]
 PICK_4 = [-342.36, 345.12, 330.60, -178.97, 0.77, -67.56]
 
-# 2 points for each placement spot: above the spot, then down into it
+# 2 points each placement spot
 PLACE_A_UP   = [-168.08, 489.28, 296.63, -179.27, 1.37, -68.17]
 PLACE_A_DOWN = [-168.24, 490.83, 238.01, -179.00, 2.37, -68.26]
 
