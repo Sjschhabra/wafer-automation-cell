@@ -60,7 +60,8 @@ def run_cycle(place_up, place_down):
 
     pulse_done()
 
-# Example: A / B / C
+# RUn A / B / C
+while True:
 run_cycle(PLACE_A_UP, PLACE_A_DOWN)
-# run_cycle(PLACE_B_UP, PLACE_B_DOWN)
-# run_cycle(PLACE_C_UP, PLACE_C_DOWN)
+run_cycle(PLACE_B_UP, PLACE_B_DOWN)
+run_cycle(PLACE_C_UP, PLACE_C_DOWN)
