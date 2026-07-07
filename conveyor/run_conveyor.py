@@ -57,7 +57,7 @@ def save_image(frame, number):
     filename = f"{number:04d}.jpg"
     path = os.path.join(SAVE_DIR, filename)
     cv2.imwrite(path, frame)
-    print(f"[SAVE] 已儲存照片：{path}")
+    print(f"[SAVE]：{path}")
     
 def conveyor1_forward():
     global conveyor_status
